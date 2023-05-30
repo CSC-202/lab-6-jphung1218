@@ -33,11 +33,13 @@ class Stack:
 
 
 def initialize() -> Stack:
-    raise NotImplementedError("Stack.initialize() not defined")
+    #raise NotImplementedError("Stack.initialize() not defined")
+    return Stack()
 
 
 def isEmpty(data: Stack) -> bool:
-    raise NotImplementedError("Stack.isEmpty() not defined")
+    #raise NotImplementedError("Stack.isEmpty() not defined")
+    return data.first is None
 
 
 def push(data: Stack, value: int) -> Stack:
