@@ -43,16 +43,37 @@ def isEmpty(data: Stack) -> bool:
 
 
 def push(data: Stack, value: int) -> Stack:
-    raise NotImplementedError("Stack.push() not defined")
+    #raise NotImplementedError("Stack.push() not defined")
+    if data.first is None:
+        new = Node(value, None)
+        data.first = new
+    else:
+        old = data.first
+        new = Node(value, old)
+        data.first = new
+    return data
 
 
 def pop(data: Stack) -> tuple[Node, Stack]:
-    raise NotImplementedError("Stack.pop() not defined")
+    #raise NotImplementedError("Stack.pop() not defined")
+    if data.first is None:
+        return None
+    else:
+        node = data.first
+        p = node
+        data.first = node.next
+        return p, data
 
 
 def peek(data: Stack) -> Node:
-    raise NotImplementedError("Stack.peek() not defined")
+    #raise NotImplementedError("Stack.peek() not defined")
+    if data.first is None:
+        return None
+    else:
+        return data.first.value
 
 
 def clear(data: Stack) -> Stack:
-    raise NotImplementedError("Stack.clear() not defined")
+    #raise NotImplementedError("Stack.clear() not defined")
+    data.head = None
+    return data
