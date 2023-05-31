@@ -317,24 +317,24 @@ for experiment in RESULTS:
 plt.subplot(1, 3, 1, xlabel='List', xticks=[], yticks=[])
 plt.bar(x=1, height=RESULTS['back  (r)'], label='back  (r)', color='blue')
 plt.bar(x=2, height=RESULTS['front (r)'], label='front (r)', color='orange')
-plt.bar(x=1, height=RESULTS['back  (i)'], label='back  (i)', color='green')
-plt.bar(x=2, height=RESULTS['front (i)'], label='front (i)', color='red')
+plt.bar(x=1, height=RESULTS['back  (i)'], label='back  (i)', color='green', width=0.5)
+plt.bar(x=2, height=RESULTS['front (i)'], label='front (i)', color='red', width=0.5)
 plt.legend()
 
 ## STACK
 plt.subplot(1, 3, 2, xlabel='Stack', xticks=[], yticks=[])
 plt.bar(x=1, height=RESULTS['push  (r)'], label='push  (r)', color='blue')
-plt.bar(x=2, height=RESULTS['pop (r)'], label='pop (r)', color='orange')
-plt.bar(x=1, height=RESULTS['push  (i)'], label='push  (i)', color='green')
-plt.bar(x=2, height=RESULTS['pop (i)'], label='pop (i)', color='red')
+plt.bar(x=2, height=RESULTS['pop   (r)'], label='pop (r)', color='orange')
+plt.bar(x=1, height=RESULTS['push  (i)'], label='push  (i)', color='green', width=0.5)
+plt.bar(x=2, height=RESULTS['pop   (i)'], label='pop (i)', color='red', width=0.5)
 plt.legend()
 
 ## QUEUE
 plt.subplot(1, 3, 3, xlabel='Queue', xticks=[], yticks=[])
 plt.bar(x=2, height=RESULTS['deq   (r)'], label='deq  (r)', color='blue')
 plt.bar(x=1, height=RESULTS['enq   (i)'], label='enq (i)', color='orange')
-plt.bar(x=2, height=RESULTS['deq   (i)'], label='deq  (i)', color='green')
-plt.bar(x=1, height=RESULTS['enq   (r)'], label='enq (r)', color='red')
+plt.bar(x=2, height=RESULTS['deq   (i)'], label='deq  (i)', color='green', width=0.5)
+plt.bar(x=1, height=RESULTS['enq   (r)'], label='enq (r)', color='red', width=0.5)
 plt.legend()
 
 ## SAVE FIGURE

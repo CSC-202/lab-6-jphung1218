@@ -106,7 +106,8 @@ def addToBack(data: List, value: int) -> List:
             helper(node.next, value)
     
     if data.first is None:
-        return None
+        new = Node(value, None)
+        data.first = new
     else:
         helper(data.first, value)
 
